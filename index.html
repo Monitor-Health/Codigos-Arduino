@@ -89,8 +89,10 @@
         
         contextoLm35Temperatura.canvas.width = 1000;
         contextoLm35Temperatura.canvas.height = 300;
+
         contextoLm35TemperaturaCongelante.canvas.width = 1000;
         contextoLm35TemperaturaCongelante.canvas.height = 300;
+
         contextoLm35TemperaturaDerretendo.canvas.width = 1000;
         contextoLm35TemperaturaDerretendo.canvas.height = 300;
         
@@ -105,12 +107,14 @@
             {
                 type: 'line',
                 data: {
-                    datasets: [{
-                        label: 'Temperatura',
-                        type: 'line',
-                        borderColor: ['#A8C6A8'],
-                        backgroundColor: ["transparent"]
-                    }]
+                    datasets: [
+                        {
+                            label: 'Temperatura',
+                            type: 'line',
+                            borderColor: ['#A8C6A8'],
+                            backgroundColor: ["transparent"]
+                        }
+                    ]
                 },
                 options: {
                     scales: {
