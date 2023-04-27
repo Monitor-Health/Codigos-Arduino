@@ -89,9 +89,9 @@ Serial.print(0);
   Serial.print(temperaturaFria);
   Serial.print(";");
   if(digitalRead(switch_pin) == LOW){
-    Serial.print(0);
-  }else{
     Serial.print(1);
+  }else{
+    Serial.print(0);
   }
 
   Serial.print(";");

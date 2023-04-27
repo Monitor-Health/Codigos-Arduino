@@ -58,7 +58,7 @@
         <section style="width: 100%;">
             <canvas id="lm35TemperaturaFria"></canvas>
         </section>
-        <h1>Sensor Chave - Freezer 4 (Derretendo)</h1>
+        <h1>Sensor Chave - Freezer 4 (Fria)</h1>
         <section style="width: 100%;">
             <canvas id="chaveFria"></canvas>
         </section>
@@ -66,7 +66,7 @@
         <section style="width: 100%;">
             <canvas id="lm35TemperaturaQuente"></canvas>
         </section>
-        <h1>Sensor Chave - Freezer 4 (Derretendo)</h1>
+        <h1>Sensor Chave - Freezer 5 (Quente)</h1>
         <section style="width: 100%;">
             <canvas id="chaveQuente"></canvas>
         </section>
@@ -150,7 +150,7 @@
                     datasets: [{
                         label: 'Temperatura',
                         type: 'line',
-                        borderColor: ['#9EB7C2'],
+                        borderColor: ['blue'],
                         backgroundColor: ["transparent"]
                     }]
                 },
@@ -226,7 +226,7 @@
                     datasets: [{
                         label: 'Temperatura',
                         type: 'line',
-                        borderColor: ['#E8B1B1'],
+                        borderColor: ['#9EB7C2'],
                         backgroundColor: ["transparent"]
                     }]
                 },
@@ -264,7 +264,7 @@
                     datasets: [{
                         label: 'Temperatura',
                         type: 'line',
-                        borderColor: ['#E8B1B1'],
+                        borderColor: ['yellow'],
                         backgroundColor: ["transparent"]
                     }]
                 },
@@ -311,8 +311,8 @@
         contextochaveDerretendo.canvas.height = 300;
 
         
-        contextochaveFria.canvas.width = 1000;
-        contextochaveFria.canvas.height = 300;
+        contextoChaveFria.canvas.width = 1000;
+        contextoChaveFria.canvas.height = 300;
         
         contextochaveQuente.canvas.width = 1000;
         contextochaveQuente.canvas.height = 300;
@@ -509,7 +509,7 @@
         );
 
         var chaveQuente = new Chart(
-            contextoChaveQuente,
+            contextochaveQuente,
             {
                 type: 'line',
                 data: {
