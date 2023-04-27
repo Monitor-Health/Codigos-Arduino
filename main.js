@@ -79,12 +79,12 @@ const serial = async (
         const chaveFreezer3 = parseInt(valores[5]);
 
         //Fria
-        const lm35TemperaturaFreezer4 = parseFloat(valores[5]);
-        const chaveFreezer4 = parseInt(valores[6]);
+        const lm35TemperaturaFreezer4 = parseFloat(valores[6]);
+        const chaveFreezer4 = parseInt(valores[7]);
 
         //Quente
-        const lm35TemperaturaFreezer5 = parseFloat(valores[6]);
-        const chaveFreezer6 = parseInt(valores[7]);
+        const lm35TemperaturaFreezer5 = parseFloat(valores[8]);
+        const chaveFreezer5 = parseInt(valores[9]);
 
         valoresLm35Temperatura.push(lm35Temperatura);
         valoresLm35TemperaturaFreezer2.push(lm35TemperaturaFreezer2);
@@ -94,8 +94,8 @@ const serial = async (
         valoresChave.push(chave);
         valoresChaveFreezer2.push(chaveFreezer2);
         valoresChaveFreezer3.push(chaveFreezer3);
-        valoresChaveFreezer4.push(chaveFreezer3);
-        valoresChaveFreezer5.push(chaveFreezer3);
+        valoresChaveFreezer4.push(chaveFreezer4);
+        valoresChaveFreezer5.push(chaveFreezer5);
         if (HABILITAR_OPERACAO_INSERIR) {
             if (AMBIENTE == 'producao') {
                 // altere!
