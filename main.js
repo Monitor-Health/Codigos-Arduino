@@ -38,7 +38,7 @@ const serial = async (
                 // altere!
                 // CREDENCIAIS DO BANCO LOCAL - MYSQL WORKBENCH
                 host: '10.18.34.231',
-                user: 'health',
+                user: 'carlosUser',
                 password: '123a',
                 database: 'monitorhealth'
             }
@@ -127,11 +127,11 @@ const serial = async (
                 // Este insert irá inserir dados de fk_aquario id=1 (fixo no comando do insert abaixo)
                 // >> você deve ter o aquario de id 1 cadastrado.
                 await poolBancoDados.execute(
-                    `INSERT INTO dados VALUES (${lm35Temperatura}, now(), 1)`
+                    `INSERT INTO dados VALUES (DEFAULT, ${lm35Temperatura}, now(), 1)`
                     );
-                await setTimeout(() => {}, 3000);
+                setTimeout(() => {}, 3000);
                 await poolBancoDados.execute(
-                    `INSERT INTO dados VALUES (${chave}, now(), 2)`
+                    `INSERT INTO dados VALUES (DEFAULT, ${chave}, now(), 2)`
                 )
 
             } else {
