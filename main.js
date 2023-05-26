@@ -127,11 +127,19 @@ const serial = async (
                 // Este insert irá inserir dados de fk_aquario id=1 (fixo no comando do insert abaixo)
                 // >> você deve ter o aquario de id 1 cadastrado.
                 await poolBancoDados.execute(
-                    `INSERT INTO dados VALUES (DEFAULT, ${lm35Temperatura}, now(), 1)`
+                    `INSERT INTO dados VALUES (DEFAULT, ${lm35Temperatura}, now(), 1, 2),
+                    (DEFAULT, ${lm35TemperaturaFreezer2}, now(), 2, 2)
+                    (DEFAULT, ${lm35TemperaturaFreezer3}, now(), 3, 2)
+                    (DEFAULT, ${lm35TemperaturaFreezer4}, now(), 4, 2)
+                    (DEFAULT, ${lm35TemperaturaFreezer5}, now(), 5, 2)`
                     );
                 setTimeout(() => {}, 3000);
                 await poolBancoDados.execute(
-                    `INSERT INTO dados VALUES (DEFAULT, ${chave}, now(), 2)`
+                    `INSERT INTO dados VALUES (DEFAULT, ${chave}, now(), 1, 1),
+                    (DEFAULT, ${chaveFreezer2}, now(), 2, 1)
+                    (DEFAULT, ${chaveFreezer3}, now(), 3, 1)
+                    (DEFAULT, ${chaveFreezer4}, now(), 4, 1)
+                    (DEFAULT, ${chaveFreezer5}, now(), 5, 1)`
                 )
 
             } else {
