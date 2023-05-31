@@ -37,10 +37,10 @@ const serial = async (
             {
                 // altere!
                 // CREDENCIAIS DO BANCO LOCAL - MYSQL WORKBENCH
-                host: '10.18.34.231',
-                user: 'carlosUser',
-                password: '123a',
-                database: 'monitorhealth'
+                host: "10.18.33.0",
+                database: "monitorhealth",
+                user: "teste",
+                password: "urubu100"
             }
         ).promise();
     } else if (AMBIENTE == 'producao') {
@@ -128,18 +128,18 @@ const serial = async (
                 // >> você deve ter o aquario de id 1 cadastrado.
                 await poolBancoDados.execute(
                     `INSERT INTO dados VALUES (DEFAULT, ${lm35Temperatura}, now(), 1, 2),
-                    (DEFAULT, ${lm35TemperaturaFreezer2}, now(), 2, 2)
-                    (DEFAULT, ${lm35TemperaturaFreezer3}, now(), 3, 2)
-                    (DEFAULT, ${lm35TemperaturaFreezer4}, now(), 4, 2)
-                    (DEFAULT, ${lm35TemperaturaFreezer5}, now(), 5, 2)`
-                    );
-                setTimeout(() => {}, 3000);
+                    (DEFAULT, ${lm35TemperaturaFreezer2}, now(), 2, 2),
+                    (DEFAULT, ${lm35TemperaturaFreezer3}, now(), 3, 2),
+                    (DEFAULT, ${lm35TemperaturaFreezer4}, now(), 4, 2),
+                    (DEFAULT, ${lm35TemperaturaFreezer5}, now(), 5, 2);`
+                );
+                setTimeout(() => { }, 3000);
                 await poolBancoDados.execute(
                     `INSERT INTO dados VALUES (DEFAULT, ${chave}, now(), 1, 1),
-                    (DEFAULT, ${chaveFreezer2}, now(), 2, 1)
-                    (DEFAULT, ${chaveFreezer3}, now(), 3, 1)
-                    (DEFAULT, ${chaveFreezer4}, now(), 4, 1)
-                    (DEFAULT, ${chaveFreezer5}, now(), 5, 1)`
+                    (DEFAULT, ${chaveFreezer2}, now(), 2, 1),
+                    (DEFAULT, ${chaveFreezer3}, now(), 3, 1),
+                    (DEFAULT, ${chaveFreezer4}, now(), 4, 1),
+                    (DEFAULT, ${chaveFreezer5}, now(), 5, 1);`
                 )
 
             } else {
